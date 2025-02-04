@@ -142,16 +142,26 @@ css = '''
     }
 
     /* ------- 이미지 중앙 정렬 -------- */
-    .st-emotion-cache-1v0mbdj.e1wa958q1 {
+    /* stFullScreenFrame 내의 stImage에만 적용 */
+    .stFullScreenFrame .stImage {
     display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 필요시 높이 설정 */
     }
 
-    .st-emotion-cache-1v0mbdj.e1wa958q1 img {
-        display: block;
-        margin: 0 auto; /* 이미지 가로 중앙 정렬 */
+    .stFullScreenFrame .stImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
+
+    .stFullScreenFrame .stImage img {
+    display: block;
+    max-width: 100%;  /* 이미지 크기를 부모에 맞게 반응형으로 설정 */
+    height: auto;
+    }
+
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -180,7 +190,7 @@ project_list = {
     "2023": [happy_dog_map],
 }
 
-st.sidebar.image("images/me.jpg", width=150)
+st.sidebar.image("images/me.jpg", width=200)
 
 
 page_dict = {
@@ -192,7 +202,7 @@ page_dict = {
 if year not in options:
     year = "2025"  # 기본값 설정
 
-page = st.navigation(page_dict, position="hidden")
+page = st.navigation(page_dict)
 page.run()
 
 # 프로젝트 선택하지 않으면 연도 숨기기
