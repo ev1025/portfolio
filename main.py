@@ -123,6 +123,7 @@ css = '''
     .st-emotion-cache-1mcbg9u.eeng2fo2 {
         background-color: #000000; /* 배경색 */
         color: #FFFFFF;            /* 글자색 */
+        font-weight: bold;         /* 글자 굵게 */
         border: none;       /* 기본 테두리 제거 */
         outline: none;      /* 외곽선 제거 */
     }
@@ -167,6 +168,9 @@ project_list = {
     "2024": [math_teacher],
     "2023": [happy_dog_map],
 }
+
+st.sidebar.image("images/me.jpg", width=150)
+
 
 page_dict = {
     "자기소개": [intro, resume, certi],
