@@ -169,10 +169,10 @@ project_list = {
     "2023": [happy_dog_map],
 }
 
-st.sidebar.image("images/me.jpg", width=150)
 
 
-page_dict = {
+
+page_dict = { "이진우" : st.sidebar.image("images/me.jpg", width=150),
     "자기소개": [intro, resume, certi],
     f"{year}년 프로젝트": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
 }
