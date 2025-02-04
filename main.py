@@ -141,6 +141,17 @@ css = '''
         background-color: #000000; /* 배경색 유지 */
     }
 
+    /* ------- 이미지 중앙 정렬 -------- */
+    .st-emotion-cache-1v0mbdj.e1wa958q1 {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    }
+
+    .st-emotion-cache-1v0mbdj.e1wa958q1 img {
+        display: block;
+        margin: 0 auto; /* 이미지 가로 중앙 정렬 */
+    }
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -181,7 +192,7 @@ page_dict = {
 if year not in options:
     year = "2025"  # 기본값 설정
 
-page = st.navigation(page_dict)
+page = st.navigation(page_dict, position="hidden")
 page.run()
 
 # 프로젝트 선택하지 않으면 연도 숨기기
