@@ -1,6 +1,6 @@
 # cd desktop/sesac_study/포트폴리오
 import streamlit as st
-from project import intro, alter_credit, math_teacher, happy_dog_map, certi, resume
+from project import intro, alter_credit, math_teacher, happy_dog_map, luvd, resume, news
 
 st.set_page_config(page_title = "이진우 포트폴리오입니다.", page_icon = ":sunglasses:")
 
@@ -108,7 +108,6 @@ css = '''
     /* 프로젝트 제목 상단 [주제] */
     .st-emotion-cache-1b3332t {
     margin-top: 10px;  /* 위쪽 여백 */
-    margin-bottom: 10px; /* 아래쪽 여백 */
     font-size: 25px;
     font-weight: bold;
     color:rgb(126, 123, 123);
@@ -166,27 +165,29 @@ year = year or "2025"
 # 자기소개
 intro = st.Page(intro.intro, title="소개", icon=":material/person:")
 resume = st.Page(resume.resume, title="이력사항", icon=":material/license:")
-certi = st.Page(certi.certi, title="경력사항", icon=":material/lab_profile:")
 
 # 프로젝트  
 alter_credit_scording = st.Page(alter_credit.alter_project, title="대안 신용 평가", icon=":material/credit_card:", default=True)
+news = st.Page(news.news_project, title="실시간 뉴스 토픽 분석", icon=":material/newsmode:")
 math_teacher = st.Page(math_teacher.math_project, title="나만의 수학 선생님 만들기", icon=":material/function:", default=True)
-happy_dog_map = st.Page(happy_dog_map.happy_project, title="강아지 행복 지도", icon=":material/notification_important:", default=True)
+luvd = st.Page(luvd.performance, title="Funel분석을 통한 성과 개선", icon=":material/emoji_events:")
+happy_dog_map = st.Page(happy_dog_map.happy_project, title="강아지 행복 지도", icon=":material/pets:", default=True)
 
 # 프로젝트 리스트
 project_list = {
-    "2025": [alter_credit_scording],
-    "2024": [math_teacher],
+    "2025": [alter_credit_scording, news],
+    "2024": [math_teacher,luvd],
     "2023": [happy_dog_map],
 }
 
-st.sidebar.image("images/me.jpg", width=200)
+# 프로필 사진, 이름
+st.sidebar.image("images/me.jpg", width=170)
 st.sidebar.write("데이터 분석가 이진우")
 
 
 page_dict = {
-    "자기소개": [intro, resume, certi],
-    f"{year}년 프로젝트": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
+    "자기소개": [intro, resume],
+    f"{year}년 활동": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
 }
 
 # 유효한 year 값 확인 후 프로젝트 리스트 구성
@@ -197,7 +198,7 @@ page = st.navigation(page_dict)
 page.run()
 
 # 프로젝트 선택하지 않으면 연도 숨기기
-if page.title in ['소개', '이력사항','경력사항']:
+if page.title in ['소개', '이력사항']:
     st.markdown("<style>[data-testid='stButtonGroup'] {display: none;}</style>", unsafe_allow_html=True)
 else:
     st.markdown("<style>[data-testid='stButtonGroup'] {display: block;}</style>", unsafe_allow_html=True)
