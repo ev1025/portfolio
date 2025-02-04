@@ -119,11 +119,11 @@ css = '''
     display: flex;
     justify-content: flex-end; /* 가로 방향 오른쪽 끝 정렬 */
     }
-    .st-emotion-cache-1mcbg9u.eeng2fo2 {
-        background-color: #000000; /* 배경색 */d
-        color: white;             /* 글자색 */
-    }
 
+
+    .st-emotion-cache-1mcbg9u.eeng2fo2 {
+    background-color: #000000; /* 배경색 */
+    color: #FFFFFF;            /* 글자색 */
     border: none;       /* 기본 테두리 제거 */
     outline: none;      /* 외곽선 제거 */
     }
