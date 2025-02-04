@@ -141,27 +141,17 @@ css = '''
         background-color: #000000; /* 배경색 유지 */
     }
 
-    /* ------- 이미지 중앙 정렬 -------- */
-    /* stFullScreenFrame 내의 stImage에만 적용 */
-    .stFullScreenFrame .stImage {
+    /* ------- 프로필 이미지, 글자 중앙 정렬 -------- */
+    [data-testid="stFullScreenFrame"]{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%; /* 필요시 높이 설정 */
     }
 
-    .stFullScreenFrame .stImageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .stElementContainer.element-container.st-emotion-cache-fxdc7h.eiemyj1 p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
     }
-
-    .stFullScreenFrame .stImage img {
-    display: block;
-    max-width: 100%;  /* 이미지 크기를 부모에 맞게 반응형으로 설정 */
-    height: auto;
-    }
-
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
@@ -191,6 +181,7 @@ project_list = {
 }
 
 st.sidebar.image("images/me.jpg", width=200)
+st.sidebar.write("데이터 분석가 이진우")
 
 
 page_dict = {
