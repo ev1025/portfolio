@@ -116,28 +116,30 @@ css = '''
 
     /* ------- 깃허브 -------- */
     .stLinkButton {
-    display: flex;
-    justify-content: flex-end; /* 가로 방향 오른쪽 끝 정렬 */
+        display: flex;
+        justify-content: flex-end; /* 가로 방향 오른쪽 끝 정렬 */
     }
-
 
     .st-emotion-cache-1mcbg9u.eeng2fo2 {
-    background-color: #000000; /* 배경색 */
-    color: #FFFFFF;            /* 글자색 */
-    border: none;       /* 기본 테두리 제거 */
-    outline: none;      /* 외곽선 제거 */
+        background-color: #000000; /* 배경색 */
+        color: #FFFFFF;            /* 글자색 */
+        border: none;       /* 기본 테두리 제거 */
+        outline: none;      /* 외곽선 제거 */
     }
-    .st-emotion-cache-1mcbg9u.e16zdaao0:hover {
-    outline: none; /* 호버 시 외곽선 제거 */
-    border: none;  /* 호버 시 테두리 제거 */
+
+    .st-emotion-cache-1mcbg9u.eeng2fo2:hover {
+        outline: none; /* 호버 시 외곽선 제거 */
+        border: none;  /* 호버 시 테두리 제거 */
     }
-    .st-emotion-cache-1mcbg9u.e16zdaao0:focus,
-    .st-emotion-cache-1mcbg9u.e16zdaao0:active {
-    outline: none;      /* 포커스 시 외곽선 제거 */
-    border: none;       /* 포커스 시 테두리 제거 */
-    color: white;       /* 글자색 흰색 유지 */
-    background-color: #000000; /* 배경색 유지 */
+
+    .st-emotion-cache-1mcbg9u.eeng2fo2:focus,
+    .st-emotion-cache-1mcbg9u.eeng2fo2:active {
+        outline: none;      /* 포커스 시 외곽선 제거 */
+        border: none;       /* 포커스 시 테두리 제거 */
+        color: white;       /* 글자색 흰색 유지 */
+        background-color: #000000; /* 배경색 유지 */
     }
+
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
