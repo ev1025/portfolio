@@ -155,8 +155,6 @@ css = '''
 '''
 st.markdown(css, unsafe_allow_html=True)
 
-
-
 # state 초기화 / 연도 생성 / 네비게이션 생성
 options = ["2023", "2024", "2025"]
 year = st.pills("a", options, selection_mode="single", default="2025", label_visibility="hidden") # collapsed, visible
@@ -184,15 +182,10 @@ project_list = {
 st.sidebar.image("images/me.jpg", width=170)
 st.sidebar.write("데이터 분석가 이진우")
 
-
 page_dict = {
     "자기소개": [intro, resume],
     f"{year}년 활동": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
 }
-
-# 유효한 year 값 확인 후 프로젝트 리스트 구성
-if year not in options:
-    year = "2025"  # 기본값 설정
 
 page = st.navigation(page_dict)
 page.run()
@@ -203,6 +196,7 @@ if page.title in ['소개', '이력사항']:
 else:
     st.markdown("<style>[data-testid='stButtonGroup'] {display: block;}</style>", unsafe_allow_html=True)
 
+    
 
 # /* 호버 확대 */
 # [data-testid="stHorizontalBlock"] img {

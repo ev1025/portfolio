@@ -8,7 +8,7 @@ def math_project():
     tabs = st.tabs(["분석 개요","데이터 분석", "모델 훈련", "모델 평가", '결과'])
 
     with tabs[0]:   
-        st.write('개요')
+        st.write('분석 개요')
     
     with tabs[1]:   
         st.write('전처리')
