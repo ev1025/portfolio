@@ -131,9 +131,10 @@ css = '''
         outline: none; /* 호버 시 외곽선 제거 */
         border: none;  /* 호버 시 테두리 제거 */
     }
+    
     /* 깃허브 버튼*/
-    .st-emotion-cache-1mcbg9u.eeng2fo2:focus,
-    .st-emotion-cache-1mcbg9u.eeng2fo2:active {
+    .st-emotion-cache-1mcbg9u.efj1jhq2:focus,
+    .st-emotion-cache-1mcbg9u.efj1jhq2:active  {
         outline: none;      /* 포커스 시 외곽선 제거 */
         border: none;       /* 포커스 시 테두리 제거 */
         color: white;       /* 글자색 흰색 유지 */
@@ -202,3 +203,4 @@ else:
 # position: relative;
 # z-index: 9999;
 # }
+
