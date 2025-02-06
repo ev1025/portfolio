@@ -1,7 +1,7 @@
 import streamlit as st
 
 def news_project():
-    st.text('[Streamlit 대시보드]')
+    st.markdown("<h3 style='color: #8F8F8F; font-weight: bold;'>[Streamlit 대시보드]</h3>", unsafe_allow_html=True)
     st.title('크롤링 데이터를 활용한 실시간 토픽 모델링(LDA) 및 주식 차트 분석')
     st.link_button("Github", "https://github.com/ev1025/News_Crawling_Dashboard")
 

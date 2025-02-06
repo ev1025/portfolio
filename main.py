@@ -131,25 +131,20 @@ css = '''
         outline: none; /* 호버 시 외곽선 제거 */
         border: none;  /* 호버 시 테두리 제거 */
     }
-
+    /* 깃허브 버튼*/
     .st-emotion-cache-1mcbg9u.eeng2fo2:focus,
     .st-emotion-cache-1mcbg9u.eeng2fo2:active {
         outline: none;      /* 포커스 시 외곽선 제거 */
         border: none;       /* 포커스 시 테두리 제거 */
         color: white;       /* 글자색 흰색 유지 */
-        background-color: #000000; /* 배경색 유지 */
+        font-weight: bold;  /* 글자 굵게 */
+        background-color: #000000; /* 배경색 검은색*/
     }
 
-    /* ------- 프로필 이미지, 글자 중앙 정렬 -------- */
+    /* ------- 프로필 이미지 중앙 정렬 -------- */
     [data-testid="stFullScreenFrame"]{
     display: flex;
     justify-content: center;
-    }
-
-    .stElementContainer.element-container.st-emotion-cache-fxdc7h.eiemyj1 p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
     }
 </style>
 '''
@@ -180,7 +175,7 @@ project_list = {
 
 # 프로필 사진, 이름
 st.sidebar.image("images/me.jpg", width=170)
-st.sidebar.write("데이터 분석가 이진우")
+st.sidebar.markdown("<h3 style='font-weight: bold; text-align: center;'>데이터 분석가 이진우</h3>", unsafe_allow_html=True)
 
 page_dict = {
     "자기소개": [intro, resume],

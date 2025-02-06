@@ -1,7 +1,7 @@
 import streamlit as st
 
 def math_project():
-    st.text('[gemma 파인 튜닝]')
+    st.markdown("<h3 style='color: #8F8F8F; font-weight: bold;'>[gemma 파인 튜닝]</h3>", unsafe_allow_html=True)
     st.title('LLM를 이용한 나만의 수학 선생님 만들기')
     st.link_button("Github", "https://github.com/ev1025/gemma_sprint")
 

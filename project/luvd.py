@@ -1,7 +1,7 @@
 import streamlit as st
 
 def performance():
-    st.text('[Funel분석을 통한 성과 개선]')
+    st.markdown("<h3 style='color: #8F8F8F; font-weight: bold;'>[Funel분석을 통한 성과 개선]</h3>", unsafe_allow_html=True)
     st.title('고객 이용 페이지 개선을 통한 서비스 이용 수 2배 증가')
 
     tabs = st.tabs(["분석 개요","데이터 분석", "모델 훈련", "모델 평가", '결과'])

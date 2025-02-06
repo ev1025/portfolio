@@ -1,7 +1,7 @@
 import streamlit as st
 
 def happy_project():
-    st.text('[태블로 시각화]')
+    st.markdown("<h3 style='color: #8F8F8F; font-weight: bold;'>[태블로 시각화]</h3>", unsafe_allow_html=True)
     st.title('네이버지도 크롤링을 이용한 강아지 행복 지도')
     st.link_button("Github", "https://github.com/ev1025/happy_dog_map")
 
