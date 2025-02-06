@@ -119,7 +119,7 @@ css = '''
         justify-content: flex-end; /* 가로 방향 오른쪽 끝 정렬 */
     }
 
-    .st-emotion-cache-1mcbg9u.eeng2fo2 {
+    .st-emotion-cache-1mcbg9u.efj1jhq2 {
         background-color: #000000; /* 배경색 */
         color: #FFFFFF;            /* 글자색 */
         font-weight: bold;         /* 글자 굵게 */
@@ -127,21 +127,11 @@ css = '''
         outline: none;      /* 외곽선 제거 */
     }
 
-    .st-emotion-cache-1mcbg9u.eeng2fo2:hover {
+    .st-emotion-cache-1mcbg9u.efj1jhq2:hover {
         outline: none; /* 호버 시 외곽선 제거 */
         border: none;  /* 호버 시 테두리 제거 */
     }
     
-    /* 깃허브 버튼*/
-    .st-emotion-cache-1mcbg9u.efj1jhq2:focus,
-    .st-emotion-cache-1mcbg9u.efj1jhq2:active  {
-        outline: none;      /* 포커스 시 외곽선 제거 */
-        border: none;       /* 포커스 시 테두리 제거 */
-        color: white;       /* 글자색 흰색 유지 */
-        font-weight: bold;  /* 글자 굵게 */
-        background-color: #000000; /* 배경색 검은색*/
-    }
-
     /* ------- 프로필 이미지 중앙 정렬 -------- */
     [data-testid="stFullScreenFrame"]{
     display: flex;
