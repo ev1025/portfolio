@@ -3,7 +3,7 @@ import pandas as pd
 
 def intro():
     st.markdown("# 안녕하세요! 적응력 甲 값진우입니다.", unsafe_allow_html=True)
-    st.divider()
+    st.markdown("<hr style='border: 2px solid #37818E;'>", unsafe_allow_html=True)
     
     col1, col2 = st.columns([2,2]) 
     
@@ -36,6 +36,7 @@ def intro():
         ##### 🙇 **자기소개서** : <a href="https://cheddar-alphabet-bb9.notion.site/4745bdcb258949e1939b50a87690292c?pvs=4">보러가기</a> 
 
         """, unsafe_allow_html=True)
+        st.divider()
 # Create a clickable email link using markdown
 
 # Create a clickable phone number link using markdown

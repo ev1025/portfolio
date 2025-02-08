@@ -113,7 +113,7 @@ css = '''
     color:rgb(126, 123, 123);
     }
 
-    /* ------- 깃허브 -------- */
+    /* ------- 깃허브 버튼 -------- */
     .stLinkButton {
         display: flex;
         justify-content: flex-end; /* 가로 방향 오른쪽 끝 정렬 */
@@ -127,7 +127,8 @@ css = '''
         outline: none;      /* 외곽선 제거 */
     }
 
-    .st-emotion-cache-1mcbg9u.efj1jhq2:hover {
+    .st-emotion-cache-1mcbg9u.efj1jhq2:hover,
+    .st-emotion-cache-1mcbg9u.efj1jhq2:active {
         outline: none; /* 호버 시 외곽선 제거 */
         border: none;  /* 호버 시 테두리 제거 */
     }
@@ -154,7 +155,7 @@ resume = st.Page(resume.resume, title="이력사항", icon=":material/license:")
 alter_credit_scording = st.Page(alter_credit.alter_project, title="대안 신용 평가", icon=":material/credit_card:", default=True)
 news = st.Page(news.news_project, title="실시간 뉴스 토픽 분석", icon=":material/newsmode:")
 math_teacher = st.Page(math_teacher.math_project, title="나만의 수학 선생님 만들기", icon=":material/function:", default=True)
-luvd = st.Page(luvd.performance, title="Funel분석을 통한 성과 개선", icon=":material/emoji_events:")
+luvd = st.Page(luvd.performance, title="Funel분석을 통한 성과 개선", icon=":material/insert_chart:")
 happy_dog_map = st.Page(happy_dog_map.happy_project, title="강아지 행복 지도", icon=":material/pets:", default=True)
 
 # 프로젝트 리스트
