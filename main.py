@@ -126,19 +126,17 @@ css = '''
         border: none;       /* 기본 테두리 제거 */
         outline: none;      /* 외곽선 제거 */
     }
-    .st-emotion-cache-1mcbg9u.efj1jhq2 p{
-    font-weight: bold;
-
-    .st-emotion-cache-1mcbg9u.efj1jhq2:hover{
-        outline: none; /* 호버 시 외곽선 제거 */
-        border: none;  /* 호버 시 테두리 제거 */
+    .st-emotion-cache-1mcbg9u.efj1jhq2 p,
+    .st-emotion-cache-1mcbg9u.efj1jhq2 p:focus,
+    .st-emotion-cache-1mcbg9u.efj1jhq2 p:active {
+        color: white; /* 글자색 */
+        font-weight: bold;
     }
+    
     .st-emotion-cache-1mcbg9u.efj1jhq2:active,
-    .st-emotion-cache-1mcbg9u.efj1jhq2:hover,
-    .st-emotion-cache-1mcbg9u.efj1jhq2:focus {
+    .st-emotion-cache-1mcbg9u.efj1jhq2:hover, {
         outline: none; /* 호버 시 외곽선 제거 */
         border: none;  /* 호버 시 테두리 제거 */
-        color : white;
     }
     
     /* ------- 프로필 이미지 중앙 정렬 -------- */
