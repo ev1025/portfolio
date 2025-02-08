@@ -5,7 +5,7 @@ from project import intro, alter_credit, math_teacher, happy_dog_map, luvd, resu
 st.set_page_config(page_title = "이진우 포트폴리오입니다.", page_icon = ":sunglasses:")
 
 # 네비게이션 로고, 기본 로고
-st.logo(image="images/horizontal_blue.png", 
+st.logo(image="images/logo.png", 
         icon_image="images/icon_blue.png")
 
 # 연도, 상단 탭 CSS
