@@ -128,6 +128,11 @@ css = '''
     .st-emotion-cache-1mcbg9u.efj1jhq2 p{
     font-weight: bold;
     }
+    .st-emotion-cache-1mcbg9u.efj1jhq2 p:active{
+    font-weight: bold;
+    color : white;
+    }
+
 
     .st-emotion-cache-1mcbg9u.efj1jhq2:hover{
         outline: none; /* 호버 시 외곽선 제거 */
