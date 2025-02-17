@@ -8,48 +8,10 @@ st.set_page_config(page_title = "이진우 포트폴리오입니다.", page_icon
 st.logo(image="images/logo.png", 
         icon_image="images/icon_blue.png")
 
+
 # 연도, 상단 탭 CSS
 css = '''
 <style>
-    /* --------- 연도버튼 ---------- */
-    .stButtonGroup [data-baseweb="button-group"] button [data-testid="stMarkdownContainer"] p {
-    font-size: 17px;         /* 텍스트 크기 조정 */
-    font-weight : bold;
-    padding: 10px 0px;       /* 버튼의 패딩 조정 */
-    height: 45px;            /* 버튼의 높이 */
-    width : 40px;
-    }
-    [data-baseweb="button-group"] {
-    column-gap: 0.4rem; /* 버튼 간격 */
-    }
-    [kind="pills"] {
-    border-radius : 8px; /* 둥근 모서리 */
-    }
-    [kind="pillsActive"] {
-    border-radius: 8px; /* 활성화된 버튼에도 동일한 둥근 모서리 */
-    }
-
-
-    /* ---------- 상단탭 ---------*/
-    [data-baseweb="tab-highlight"] {
-    height: 0.16rem;        /* 빨간줄 */
-    }
-    [data-baseweb="tab-border"] {
-    margin-top: 0.8px;      /* 회색줄 */
-    }
-    .stTabs [data-baseweb="tab-list"] {
-    display: flex;          /* 플렉스 컨테이너 설정 */
-    gap: 1.6rem;            /* 탭 간 간격 조정 */
-    }
-    .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
-    font-size: 1.1rem;      /* 탭 글씨 크기 */
-    font-weight: normal;    /* 기본 상태 */
-    }
-    .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] [data-testid="stMarkdownContainer"] p {
-    font-weight: bold;      /* 활성화된 탭글씨 볼드 처리 */
-    }
-
-    
     /* --------- 네비게이션 --------- */
     [data-testid="stNavSectionHeader"] {
         font-size: 1rem;    /* 헤더  */
@@ -99,8 +61,8 @@ css = '''
     right: 20px;
     }
 
-    /* 프로젝트 제목 */
-    [id="5118a375"] {
+    /* 프로젝트 제목 여백*/
+    h1 {
     margin-top: 0 !important;
     padding-top: 0 !important;
     }
@@ -148,46 +110,47 @@ css = '''
 '''
 st.markdown(css, unsafe_allow_html=True)
 
-# state 초기화 / 연도 생성 / 네비게이션 생성
-options = ["2023", "2024", "2025"]
-year = st.pills("a", options, selection_mode="single", default="2025", label_visibility="hidden") # collapsed, visible
-year = year or "2025"
+# # 상단 연도 버튼
+# options = ["2023", "2024", "2025"]
+# year = st.pills("a", options, selection_mode="single", default="2025", label_visibility="hidden") # collapsed, visible
+# year = year or "2025"
+
+# project_list = {
+#     "2025": [alter_credit_scording, news],
+#     "2024": [math_teacher,luvd],
+#     "2023": [happy_dog_map],
+# }
 
 # 자기소개
-intro = st.Page(intro.intro, title="소개", icon=":material/person:")
+intro = st.Page(intro.intro, title="소개", icon=":material/person:", default=True)
 resume = st.Page(resume.resume, title="이력사항", icon=":material/license:")
+luvd = st.Page(luvd.performance, title="경력사항", icon=":material/insert_chart:")
 
 # 프로젝트  
-alter_credit_scording = st.Page(alter_credit.alter_project, title="대안 신용 평가", icon=":material/credit_card:", default=True)
+alter_credit_scording = st.Page(alter_credit.alter_project, title="대안 신용 평가", icon=":material/credit_card:")
 news = st.Page(news.news_project, title="실시간 뉴스 토픽 분석", icon=":material/newsmode:")
-math_teacher = st.Page(math_teacher.math_project, title="나만의 수학 선생님 만들기", icon=":material/function:", default=True)
-luvd = st.Page(luvd.performance, title="Funel분석을 통한 성과 개선", icon=":material/insert_chart:")
-happy_dog_map = st.Page(happy_dog_map.happy_project, title="강아지 행복 지도", icon=":material/pets:", default=True)
+math_teacher = st.Page(math_teacher.math_project, title="나만의 수학 선생님 만들기", icon=":material/function:")
+happy_dog_map = st.Page(happy_dog_map.happy_project, title="강아지 행복 지도", icon=":material/pets:")
 
-# 프로젝트 리스트
-project_list = {
-    "2025": [alter_credit_scording, news],
-    "2024": [math_teacher,luvd],
-    "2023": [happy_dog_map],
-}
 
-# 프로필 사진, 이름
+# 사이드바 프로필 사진, 이름
 st.sidebar.image("images/me.jpg", width=170)
 st.sidebar.markdown("<h3 style='font-weight: bold; text-align: center;'>데이터 분석가 이진우</h3>", unsafe_allow_html=True)
 
 page_dict = {
-    "자기소개": [intro, resume],
-    f"{year}년 활동": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
+    "자기소개" : [intro, resume, luvd],
+    "프로젝트" : [alter_credit_scording, news, math_teacher, happy_dog_map]
+    # f"{year}년 활동": project_list.get(year, []),  # year에 해당하는 프로젝트만 선택
 }
 
 page = st.navigation(page_dict)
 page.run()
 
-# 프로젝트 선택하지 않으면 연도 숨기기
-if page.title in ['소개', '이력사항']:
-    st.markdown("<style>[data-testid='stButtonGroup'] {display: none;}</style>", unsafe_allow_html=True)
-else:
-    st.markdown("<style>[data-testid='stButtonGroup'] {display: block;}</style>", unsafe_allow_html=True)
+# # 프로젝트 선택하지 않으면 연도 숨기기
+# if page.title in ['소개', '이력사항']:
+#     st.markdown("<style>[data-testid='stButtonGroup'] {display: none;}</style>", unsafe_allow_html=True)
+# else:
+#     st.markdown("<style>[data-testid='stButtonGroup'] {display: block;}</style>", unsafe_allow_html=True)
 
     
 
