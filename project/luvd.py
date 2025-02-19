@@ -6,38 +6,34 @@ import pandas as pd
 import altair as alt
 
 def performance():
-    st.markdown("<h3 style='color: #008080; font-weight: bold;'>[퍼널 개선으로 서비스 이용 고객 2배 증가]</h3>", unsafe_allow_html=True)
-    st.title('연애 IT 기업 LuvD 그로스 마케터')
+    st.markdown("<h4 style='color: #008080; font-weight: bold;'>[퍼널 개선으로 서비스 이용 고객 2배 증가]</h4>", unsafe_allow_html=True)
+    st.subheader('연애 IT 기업 LuvD의 그로스 마케터')
     st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown("""<h4 style='color: #7D7D7D; font-weight: bold;'>
-                2023년 9월 1일 ~ 2024년 12월 6일 (15개월) </h4>""", unsafe_allow_html=True)
+    st.markdown("""<h5 style='color: #7D7D7D; font-weight: bold;'>
+                2023년 9월 1일 ~ 2024년 12월 6일 (15개월) </h5>""", unsafe_allow_html=True)
     st.markdown("<hr style='border: 1.5px solid #808080;'>", unsafe_allow_html=True)
-    st.markdown("""<h3> 회사 소개</h3>
-                <span style = font-size:20px> &nbsp; 이별을 겪은 사람들이 지난 연애와 자신을 되돌아보고 더 나은 사람이 될 수 있도록 솔루션을 주는 연애 IT 기업입니다. 
-                실패한 연애를 바로잡고 <strong>헤어진 연인</strong>과 <strong>관계를 회복</strong>하거나 <strong>극복</strong>을 통해 새로운 연애를 시작할 수 있도록 돕습니다. </span>
-<br>
-<br>
+    st.markdown("""<h4>회사 소개</h4>
+                &nbsp; 이별을 겪은 사람들이 지난 연애와 자신을 되돌아보고 더 나은 사람이 될 수 있도록 솔루션을 주는 연애 IT 기업입니다. 
+                실패한 연애를 바로잡고 <strong>헤어진 연인</strong>과 <strong>관계를 회복</strong>하거나 <strong>극복</strong>을 통해 새로운 연애를 시작할 수 있도록 돕습니다.
 <br>
                 """, unsafe_allow_html=True)
 
 
     #### 비즈니스 퍼널
-    st.markdown("""<h3> 비즈니스 퍼널</h3>
-<br>
-                """, unsafe_allow_html=True)
-    st.image("images/FUNEL2.png",width=700)
+    st.divider() 
+    st.markdown("<h4> 비즈니스 퍼널</h4><br>", unsafe_allow_html=True)
+    st.image("images/FUNEL2.png",width=600)
 
     st.divider()
-    st.markdown("""<br>
-                """, unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
  
     
 
 
     # ---------------------  문제사항 1  ------------------------------------
     st.markdown("""
-    ### 문제 사항
-    #### 1) 홈페이지 Bounce Rate(즉시 이탈)가 높고 방문자 수 대비 신청서 제출률이 저조
+    #### 문제 사항
+    ##### 1) 홈페이지 Bounce Rate(즉시 이탈)가 높고 방문자 수 대비 신청서 제출률이 저조
     - 상담 신청을 위해서는 무조건 홈페이지를 방문해야 하는 문제 발견
     - 홈페이지에 방문하지 않고도 상담을 신청할 수 있도록 퍼널을 축소
     - 해당 서비스는 개인의 민감한 정보를 다루기 때문에 신뢰성 있는 페이지 개선에 초점
@@ -47,10 +43,10 @@ def performance():
                 """, unsafe_allow_html=True) 
     col1, col2 = st.columns([1,1])
     with col1:
-        st.image("images/link_before.png")
+        st.image("images/link_before.png", width=300)
         st.markdown("<div style='font-size:15px; text-align: center;'>개선 전</div>", unsafe_allow_html=True)
     with col2:
-        st.image("images/link_after.jpg")
+        st.image("images/link_after.jpg", width=300)
         st.markdown("<div style='font-size:15px; text-align: center;'>개선 후</div><br><br><br>", unsafe_allow_html=True)
 
     st.markdown("<h5 style=' text-align: center;'>퍼널 개선 후 상담신청 전환률</h5>", unsafe_allow_html=True)
@@ -101,7 +97,7 @@ def performance():
 <br>  
 <br>
                                   
-#### 2) 신청서를 제출했지만 견적 상담을 하지 않는 문제
+##### 2) 신청서를 제출했지만 견적 상담을 하지 않는 문제
 - 신청서를 제출하고 카카오톡 채팅방으로 입장해야 견적 상담을 받을 수 있는 문제 발견
 - 신청서 제출 완료 페이지를 개선하여 제출 즉시 카카오톡 채팅방으로 들어올 수 있도록 유도
 - 페이지 개선 후 약 **90% 이상**의 고객이 즉시 채팅방으로 입장
@@ -124,14 +120,14 @@ def performance():
     st.divider() 
     st.markdown("""
 <br>  
-<br>
     
-### 개선 결과
-- 추가적인 **마케팅 비용 없이** 결제 전환률을 유지하며 상담 신청자 수를 증가시켜 **2배 이상의 성과** 달성
-- 해딩 수치는 실제 수치에 스케일링을 진행하였습니다.
+#### 개선 결과
+- 추가적인 **마케팅 비용 없이** 결제 전환률을 유지하며 상담 신청자 수를 증가시켜 **2배 이상의 성과** 달성   
+                           
+<br>
                 
-<br>
-<br>
+<span style='color:#7D7D7D'>※ 본 그래프는 실제 데이터에 스케일링을 진행한 값 </span>
+                
                 """, unsafe_allow_html=True) 
     
 

@@ -44,3 +44,8 @@ def resume():
              ["2020.03 ~ 2022.07", "2022.07"],
              ['한양 사이버대학교 (글로벌 경영학, 경영정보학 복수 전공) 수석 졸업','졸업생 대표 성적우수 총장상 수상'])
     
+    col1, col2 = st.columns([1,1])
+    with col1:
+        st.image('images/resume2.png', width=400)
+    with col2:
+        st.image('images/resume1.jpg', width=400)
