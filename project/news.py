@@ -25,7 +25,7 @@ def news_project():
 #### 프로젝트 소개
 사용자가 네이버 뉴스를 크롤링하여 특정 카테고리의 토픽을 분석하고 이를 워드 클라우드 형태로 시각화하는 동시에 수치형 데이터를 활용한 시각화를 통해 직관적이고 효율적인 데이터 분석 경험을 제공하는 Streamlit 기반 대시보드 애플리케이션을 제작 및 배포
             
-<a href="https://ev1025-news-crawling-dashboard-projectapp-ek6pew.streamlit.app/">
+<a href="https://news-crawling-dashboard.streamlit.app/">
 <img width="485" alt="image" src="https://github.com/user-attachments/assets/e6f58d1e-d677-40ed-bdde-61c13486869f" />
 </a>
 <p><u><em>이미지를 클릭하시면 대시보드로 이동합니다!</em></u></p>
